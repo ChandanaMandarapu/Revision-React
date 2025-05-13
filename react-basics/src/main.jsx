@@ -7,3 +7,4 @@ createRoot(document.getElementById('root')).render(
     <App />
   </StrictMode>,
 )
+// from one component u can only return one parentelement so we use div for that 

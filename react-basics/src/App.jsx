@@ -1,13 +1,17 @@
-import Greet from "./components/Greet";
-import Add from "./components/Add"
-function App() {
-  return 
-  <div>
-    <Greet />
-    <Add />
-  </div>
-  
-}
 
-// export default Greet;
-export default Add;
+import Header from "./components/Header";
+import Main from "./components/Main";
+import Footer from "./components/Footer"
+import WelcomHomeMessage from "./components/WelcomHomeMessage";
+const App = () => {
+  return (
+    <div>
+      <Header />
+      <Main />
+      <Footer />
+      <WelcomHomeMessage />
+    </div>
+  );
+};
+
+export default App;
