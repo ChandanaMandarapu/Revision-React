@@ -36,6 +36,7 @@ const Lists = () => {
         },
     ];
 
+
     return (
         <div>
             {numbers.map((number, index) => (
@@ -48,6 +49,12 @@ const Lists = () => {
                 <ul key={user.username}> {/* using username as key */}
                     <li>{user.username}</li>
                     <li>{user.email}</li>
+                </ul>
+            ))}
+            {places.map((place) => (
+                <ul key={place.state}>
+                    <li>State: {place.state}</li>
+                    <li>Famous for: {place.famous}</li>
                 </ul>
             ))}
 
