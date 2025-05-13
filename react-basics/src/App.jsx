@@ -9,7 +9,9 @@ import ProductList from "./components/ProductList";
 import Person from "./components/Person";
 import Product from "./components/Product";
 import Review from "./components/Review";
-import Card from "./components/Card";
+import Card from "./components/Card"; 
+import Weather from "./components/Weather";
+import UserStatus from "./components/UserStatus"
 const App = () => {
   return (
     <div>
@@ -32,6 +34,8 @@ const App = () => {
         <h1>my card 2</h1>
         <p>Lorem, ipsum dolor.</p>
       </Card>
+      <Weather />
+      <UserStatus loggedIn = {true} isAdmin = {false}/>
     </div>
   );
 };
