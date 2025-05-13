@@ -11,8 +11,9 @@ import Product from "./components/Product";
 import Review from "./components/Review";
 import Card from "./components/Card"; 
 import Weather from "./components/Weather";
-import UserStatus from "./components/UserStatus"
+// import UserStatus from "./components/UserStatus"
 import Greetings from "./components/Greetings"
+import ProfileCard from "./components/ProfileCard";
 const App = () => {
   return (
     <div>
@@ -36,8 +37,9 @@ const App = () => {
         <p>Lorem, ipsum dolor.</p>
       </Card>
       <Weather />
-      <UserStatus loggedIn = {true} isAdmin = {false}/>
+      {/* <UserStatus loggedIn = {true} isAdmin = {false}/> */}
       <Greetings timeOfDay = "mrng" />
+      <ProfileCard />
     </div>
   );
 };
