@@ -9,6 +9,7 @@ import ProductList from "./components/ProductList";
 import Person from "./components/Person";
 import Product from "./components/Product";
 import Review from "./components/Review";
+import Card from "./components/Card";
 const App = () => {
   return (
     <div>
@@ -23,6 +24,14 @@ const App = () => {
       <Person name = "chandu" age = {21}/>
       <Product name = "iphone" price = {39} />
       <Review name = "super" stars = {"3tomatoes"} />
+      <Card>
+        <h1>my card</h1>
+        <p>Lorem, ipsum dolor.</p>
+      </Card>
+      <Card>
+        <h1>my card 2</h1>
+        <p>Lorem, ipsum dolor.</p>
+      </Card>
     </div>
   );
 };
