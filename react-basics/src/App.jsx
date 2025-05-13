@@ -12,6 +12,7 @@ import Review from "./components/Review";
 import Card from "./components/Card"; 
 import Weather from "./components/Weather";
 import UserStatus from "./components/UserStatus"
+import Greetings from "./components/Greetings"
 const App = () => {
   return (
     <div>
@@ -36,6 +37,7 @@ const App = () => {
       </Card>
       <Weather />
       <UserStatus loggedIn = {true} isAdmin = {false}/>
+      <Greetings timeOfDay = "mrng" />
     </div>
   );
 };
