@@ -1,11 +1,16 @@
-// import React from 'react'
+import React from 'react';
 
 const StyleCard = () => {
-    <div style={backgroundColor: "skyblue",padding:"20px",
-        borderRadius : "10px",
-        color : "darkblue"
+    return (
+        <div style={{
+            backgroundColor: "skyblue",
+            padding: "20px",
+            borderRadius: "10px",
+            color: "darkblue"
+        }}>
+            StyleCard
+        </div>
+    );
+};
 
-    }>StyleCard</div>
-}
-
-export default StyleCard
+export default StyleCard;
