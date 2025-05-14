@@ -8,3 +8,9 @@ try{
 }catch(error){
     console.log("caught an error")
 }
+
+// modulewrapper
+
+// {
+//     function(exports,require,module,__filenamae,__dirname)
+// }
