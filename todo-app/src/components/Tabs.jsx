@@ -1,5 +1,3 @@
-
-
 const Tabs = () => {
   return (
     <div>Tabs</div>
