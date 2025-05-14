@@ -1,45 +1,36 @@
-
-import Header from "./components/Header";
-import Main from "./components/Main";
-import Footer from "./components/Footer"
-// import WelcomHomeMessage from "./components/WelcomHomeMessage";
-import Lists from "./components/Lists";
-import List from "./components/List";
-import ProductList from "./components/ProductList";
-import Person from "./components/Person";
-import Product from "./components/Product";
-import Review from "./components/Review";
-import Card from "./components/Card"; 
-import Weather from "./components/Weather";
-// import UserStatus from "./components/UserStatus"
-import Greetings from "./components/Greetings"
-import ProfileCard from "./components/ProfileCard";
+import { useState } from "react";
 const App = () => {
+  const [count,setCount] = useState("chandu")
+  const increment = () =>setCount(count + 1)
+  const decrement = () =>setCount(count - 1)
+  const [friends,setFriends] = useState('hina','tina')
+
+  const addOneFrnd = () =>  setFriends ([...friends,"chandu"])
+
+  const removeFriend = () => setFriends(friends.filter((f) => f === "hina"))
+
+  const updateOneFriend = () => {
+    setFriends(friends.map((f) => (f==="hina" ? "hina vina" : f)))
+  }
+
   return (
     <div>
-      <Header />
-      <Main />
-      <Footer />
-      {/* <WelcomHomeMessage /> */}
-      <Lists />
-      <List />
-      <ProductList />
-      {/* props and destructuring */}
-      <Person name = "chandu" age = {21}/>
-      <Product name = "iphone" price = {39} />
-      <Review name = "super" stars = {"3tomatoes"} />
-      <Card>
-        <h1>my card</h1>
-        <p>Lorem, ipsum dolor.</p>
-      </Card>
-      <Card>
-        <h1>my card 2</h1>
-        <p>Lorem, ipsum dolor.</p>
-      </Card>
-      <Weather />
-      {/* <UserStatus loggedIn = {true} isAdmin = {false}/> */}
-      <Greetings timeOfDay = "mrng" />
-      <ProfileCard />
+      <h1>{count}</h1>
+      {/* changing the state of cont */}
+      {/* anytime we  change the value of our state by using any set method it will re render whole components rerender*/}
+      <button onClick={increment}></button>
+      <button onClick={decrement}></button>
+
+      {friends.map((f) => (
+          <li key = {Math.random()}>{f}</li>
+        ))}
+
+      <button onClick={addOneFrnd}>Add new friend</button>
+
+      <button onClick={removeFriend}>remove one friend</button>
+
+      <button onClick={updateOneFriend}>update one friend</button>
+
     </div>
   );
 };
